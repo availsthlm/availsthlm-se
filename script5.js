@@ -32,19 +32,37 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Wrap every letter in a span
-var textWrapper = document.querySelector(".ml2");
-textWrapper.innerHTML = textWrapper.textContent.replace(
+var headlineWrapper = document.querySelector(".headline");
+headlineWrapper.innerHTML = headlineWrapper.textContent.replace(
     /\S/g,
     "<span class='letter'>$&</span>"
 );
 
+anime
+    .timeline({ loop: false })
+    .add({
+        targets: ".headline .letter",
+        scale: [5, 1],
+        opacity: [0, 1],
+        translateZ: 0,
+        easing: "easeInExpo",
+        duration: 1000,
+
+        delay: (el, i) => 110 * i,
+    })
+    .add({
+        targets: ".headline .letter",
+        translateY: -200,
+        delay: 2000,
+        duration: 1000,
+    });
+
 anime.timeline({ loop: false }).add({
-    targets: ".ml2 .letter",
-    scale: [5, 1],
+    targets: ".contact",
     opacity: [0, 1],
     translateZ: 0,
     easing: "easeInExpo",
     duration: 1000,
 
-    delay: (el, i) => 90 * i,
+    delay: 3500,
 });
