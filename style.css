@@ -3,6 +3,7 @@ html {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    background-color: black;
 }
 
 .scroll-section {
@@ -15,80 +16,69 @@ html {
     flex-direction: column;
     opacity: 1;
     transition: opacity 0.5s ease;
-}
-
-/* Section 1 */
-
-/* Section 2 */
-/* #section2 {
-    background-color: #212121;
     color: white;
-} */
-
-#pinned-section2 {
-    opacity: 0;
 }
 
-/* Section 3 */
-#section3 {
-    justify-content: flex-start;
-    align-items: flex-start;
-}
-
-#container-3 {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-}
-
-.box {
-    width: 200px;
-    height: 200px;
-    border-radius: 100px;
-    margin: 10px;
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    text-align: center;
-    line-height: 100px;
-    border: 2px solid black;
-    opacity: 1; /* Start with boxes hidden */
-    font-size: 5rem;
-}
-
-.ml1 {
+.contact {
     font-weight: 700;
-    font-size: 3em;
+    font-size: 10em;
 }
 
-.ml2 {
+.headline {
     font-weight: 900;
-    font-size: 5em;
+    font-size: 12em;
 }
 
-.ml2 .letter {
+.headline .letter {
     display: inline-block;
     line-height: 1em;
 }
 
-/* Section 4*/
-
-#section4 {
-    padding: 3rem;
-    justify-content: flex-end;
-    align-items: flex-end;
+#usp-1,
+#usp-2 {
+    font-weight: 700;
+    font-size: 6em;
+    opacity: 1;
 }
 
-#section4 img {
-    padding: 5rem;
-    width: 100%;
-    height: auto;
+#section3 {
+    background: url("/images/section-3-bg-1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
-/*
-colors
-*/
+@media screen and (max-width: 768px) {
+    .scroll-section {
+        padding: 8px;
+    }
 
-.red {
-    color: #c95c6c;
+    #section3 {
+        background: url("/images/section-3-bg.jpg");
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+    #usp-1,
+    #usp-2 {
+        font-weight: 700;
+        font-size: 2em;
+        opacity: 0;
+    }
+
+    .contact {
+        font-weight: 900;
+        font-size: 3em;
+    }
+
+    .headline {
+        font-weight: 900;
+        font-size: 3em;
+    }
+
+    .headline .letter {
+        display: inline-block;
+        line-height: 1em;
+    }
 }
