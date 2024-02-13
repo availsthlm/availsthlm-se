@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let s2t = anime.timeline({ autoplay: false });
     // Add animations
     let s2a1 = {
-        targets: "#usp-1",
+        targets: "#p1",
         opacity: [0, 1],
         duration: 1500,
         easing: "easeInOutExpo",
@@ -16,34 +16,51 @@ document.addEventListener("DOMContentLoaded", function () {
     var section2scene = new ScrollMagic.Scene({
         triggerElement: "#section2", // starting scene, when reaching this element
         duration: 1000,
+        reverse: false,
         triggerHook: 0.5, // trigger at the middle of the viewport
     }).on("enter", function () {
         s2t.play(); // Play the animation when the scene enters
     });
 
+    // Add Scene to ScrollMagic Controller
+    controller.addScene(section2scene);
+
     // Add timeline
-    let s4t = anime.timeline({ autoplay: false });
-    // Add animations
-    let s4a1 = {
-        targets: "#usp-2",
+    let s4t = anime.timeline({ autoplay: false }).add({
+        targets: "#p4",
         opacity: [0, 1],
         duration: 1500,
-        easing: "easeInOutExpo",
-    };
-    // Add children
-    s4t.add(s4a1);
+        easing: "easeInExpo",
+    });
 
-    var section4scene = new ScrollMagic.Scene({
+    const section4scene = new ScrollMagic.Scene({
         triggerElement: "#section4", // starting scene, when reaching this element
         duration: 1000,
+        reverse: false,
         triggerHook: 0.5, // trigger at the middle of the viewport
     }).on("enter", function () {
         s4t.play(); // Play the animation when the scene enters
     });
-
-    // Add Scene to ScrollMagic Controller
-    controller.addScene(section2scene);
     controller.addScene(section4scene);
+
+    // Add timeline
+    let s4t1 = anime.timeline({ autoplay: false }).add({
+        targets: "#img2",
+        scale: [0, 1],
+        opacity: [0, 1],
+        duration: 2000,
+        easing: "easeInExpo",
+    });
+
+    const section41scene = new ScrollMagic.Scene({
+        triggerElement: "#section4", // starting scene, when reaching this element
+        reverse: false,
+        triggerHook: 0.8, // trigger at the middle of the viewport
+    }).on("enter", function () {
+        s4t1.play(); // Play the animation when the scene enters
+    });
+
+    controller.addScene(section41scene);
 });
 
 // Wrap every letter in a span
