@@ -6,6 +6,16 @@ html {
     color: black;
 }
 
+h3 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+p {
+    font-size: 4rem;
+    font-weight: 900;
+}
+
 .scroll-section {
     min-height: 100vh;
     width: 100%;
@@ -34,6 +44,21 @@ html {
     line-height: 1em;
 }
 
+.q {
+    margin-top: 2rem;
+    padding-left: 2rem;
+    text-align: left;
+    font-weight: 700;
+    font-size: 3rem;
+}
+.a {
+    margin-top: 2rem;
+    padding-right: 2rem;
+    text-align: left;
+    font-weight: 500;
+    font-size: 3rem;
+}
+
 #p1,
 #p2 {
     font-weight: 700;
@@ -46,17 +71,21 @@ html {
     object-fit: cover;
 }
 
-#section3 {
+/* #section3 {
     background: url("/images/section-3-bg-1.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-}
+} */
 
 #section4 #p4 {
     font-weight: 700;
     font-size: 3rem;
     opacity: 1;
+    text-align: left;
+}
+
+#section3 {
     text-align: left;
 }
 @media screen and (max-width: 768px) {
