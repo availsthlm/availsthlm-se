@@ -3,7 +3,7 @@ html {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-    background-color: black;
+    color: black;
 }
 
 .scroll-section {
@@ -16,7 +16,7 @@ html {
     flex-direction: column;
     opacity: 1;
     transition: opacity 0.5s ease;
-    color: white;
+    background: white;
 }
 
 .contact {
@@ -43,7 +43,6 @@ html {
 
 #img2 {
     width: 100%;
-    height: 100%;
     object-fit: cover;
 }
 
