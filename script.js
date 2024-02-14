@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
     Section 3 
     */
     const s3t = anime.timeline({ autoplay: false }).add({
-        targets: "#section3",
+        targets: ["#section3", "#section4"],
         backgroundColor: "#000", // transition to black
         duration: 500, // 1 second
         easing: "linear", // For a steady transition
@@ -54,9 +54,9 @@ document.addEventListener("DOMContentLoaded", function () {
     /*
     Section 5
     */
-    const s4t1 = addFadeInAnimation("#section4", "#section4", 700, 0.8);
-    controller.addScene(s4t1);
-    const s5t1 = addFadeInAnimation("#section5", "#section5", 700, 0.8);
+    // const s4t1 = addFadeInAnimation("#section4", "#section4", 700, 0.8);
+    // controller.addScene(s4t1);
+    const s5t1 = addFadeInAnimation("#section5", "#section5", 700, 0.5);
     controller.addScene(s5t1);
 });
 
