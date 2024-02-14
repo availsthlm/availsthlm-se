@@ -35,39 +35,21 @@ document.addEventListener("DOMContentLoaded", function () {
     Section 3 
     */
     const s3t = anime.timeline({ autoplay: false }).add({
-        targets: "#p4",
-        opacity: [0, 1],
-        duration: 1500,
-        easing: "easeInExpo",
+        targets: "#section3",
+        backgroundColor: "#000", // transition to black
+        duration: 500, // 1 second
+        easing: "linear", // For a steady transition
     });
 
     const section3scene = new ScrollMagic.Scene({
         triggerElement: "#section3", // starting scene, when reaching this element
-        duration: 1000,
         reverse: false,
         triggerHook: 0.5, // trigger at the middle of the viewport
     }).on("enter", function () {
         s3t.play(); // Play the animation when the scene enters
     });
 
-    const s3t1 = anime.timeline({ autoplay: false }).add({
-        targets: "#img2",
-        scale: [0, 1],
-        opacity: [0, 1],
-        duration: 2000,
-        easing: "easeInExpo",
-    });
-
-    const section31scene = new ScrollMagic.Scene({
-        triggerElement: "#section3", // starting scene, when reaching this element
-        reverse: false,
-        triggerHook: 0.8, // trigger at the middle of the viewport
-    }).on("enter", function () {
-        s3t1.play(); // Play the animation when the scene enters
-    });
-
     controller.addScene(section3scene);
-    controller.addScene(section31scene);
 
     /*
     Section 5
