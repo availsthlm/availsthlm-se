@@ -67,18 +67,19 @@ p {
 }
 
 #img2 {
+    height: 100%;
     width: 100%;
     object-fit: cover;
 }
 
 /* #section3 {
-    background: url("/images/section-3-bg-1.jpg");
+    background: url("/images/section-3-bg-2.jpg");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
 } */
 
-#section4 #p4 {
+#section3 #p4 {
     font-weight: 700;
     font-size: 3rem;
     opacity: 1;
@@ -87,17 +88,22 @@ p {
 
 #section3 {
     text-align: left;
+    background: black;
+    color: white;
 }
+
+#section5 {
+    opacity: 0;
+}
+
+/* #section4 {
+    background: black;
+    color: white;
+} */
+
 @media screen and (max-width: 768px) {
     .scroll-section {
         padding: 8px;
-    }
-
-    #section3 {
-        background: url("/images/section-3-bg-1.jpg");
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
     }
 
     #p1,

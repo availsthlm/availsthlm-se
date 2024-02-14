@@ -1,50 +1,56 @@
-document.addEventListener("DOMContentLoaded", function () {
-    var controller = new ScrollMagic.Controller();
-    // Add timeline
-    let s2t = anime.timeline({ autoplay: false });
-    // Add animations
-    let s2a1 = {
-        targets: "#p1",
+function addFadeInAnimation(
+    triggerElement,
+    targets,
+    duration = 1000,
+    triggerHook = 0.5
+) {
+    const timeline = anime.timeline({ autoplay: false }).add({
+        targets: targets,
         opacity: [0, 1],
-        duration: 1500,
-        easing: "easeInOutExpo",
-    };
-
-    // Add children
-    s2t.add(s2a1);
-
-    var section2scene = new ScrollMagic.Scene({
-        triggerElement: "#section2", // starting scene, when reaching this element
-        duration: 1000,
-        reverse: false,
-        triggerHook: 0.5, // trigger at the middle of the viewport
-    }).on("enter", function () {
-        s2t.play(); // Play the animation when the scene enters
+        easing: "easeInExpo",
     });
 
-    // Add Scene to ScrollMagic Controller
-    controller.addScene(section2scene);
+    const scene = new ScrollMagic.Scene({
+        triggerElement: triggerElement, // starting scene, when reaching this element
+        duration: duration,
+        reverse: false,
+        triggerHook: triggerHook, // trigger at the middle of the viewport
+    }).on("enter", function () {
+        timeline.play(); // Play the animation when the scene enters
+    });
 
-    // Add timeline
-    let s4t = anime.timeline({ autoplay: false }).add({
+    return scene;
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    const controller = new ScrollMagic.Controller();
+
+    /* 
+    Section 2 
+    */
+    const s2t = addFadeInAnimation("#section2", "#section2", 1000, 0.7);
+    controller.addScene(s2t);
+
+    /* 
+    Section 3 
+    */
+    const s3t = anime.timeline({ autoplay: false }).add({
         targets: "#p4",
         opacity: [0, 1],
         duration: 1500,
         easing: "easeInExpo",
     });
 
-    const section4scene = new ScrollMagic.Scene({
-        triggerElement: "#section4", // starting scene, when reaching this element
+    const section3scene = new ScrollMagic.Scene({
+        triggerElement: "#section3", // starting scene, when reaching this element
         duration: 1000,
         reverse: false,
         triggerHook: 0.5, // trigger at the middle of the viewport
     }).on("enter", function () {
-        s4t.play(); // Play the animation when the scene enters
+        s3t.play(); // Play the animation when the scene enters
     });
-    controller.addScene(section4scene);
 
-    // Add timeline
-    let s4t1 = anime.timeline({ autoplay: false }).add({
+    const s3t1 = anime.timeline({ autoplay: false }).add({
         targets: "#img2",
         scale: [0, 1],
         opacity: [0, 1],
@@ -52,15 +58,24 @@ document.addEventListener("DOMContentLoaded", function () {
         easing: "easeInExpo",
     });
 
-    const section41scene = new ScrollMagic.Scene({
-        triggerElement: "#section4", // starting scene, when reaching this element
+    const section31scene = new ScrollMagic.Scene({
+        triggerElement: "#section3", // starting scene, when reaching this element
         reverse: false,
         triggerHook: 0.8, // trigger at the middle of the viewport
     }).on("enter", function () {
-        s4t1.play(); // Play the animation when the scene enters
+        s3t1.play(); // Play the animation when the scene enters
     });
 
-    controller.addScene(section41scene);
+    controller.addScene(section3scene);
+    controller.addScene(section31scene);
+
+    /*
+    Section 5
+    */
+    const s4t1 = addFadeInAnimation("#section4", "#section4", 700, 0.8);
+    controller.addScene(s4t1);
+    const s5t1 = addFadeInAnimation("#section5", "#section5", 700, 0.8);
+    controller.addScene(s5t1);
 });
 
 // Wrap every letter in a span
@@ -88,12 +103,3 @@ anime.timeline({ loop: false }).add({
     duration: 1500,
     delay: 1500,
 });
-
-// anime.timeline({ loop: false }).add({
-//     targets: "#section2",
-//     opacity: [0, 1],
-//     translateZ: -200,
-//     easing: "easeInExpo",
-//     duration: 1000,
-//     delay: 3500,
-// });
