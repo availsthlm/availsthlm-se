@@ -7,7 +7,7 @@ function addFadeInAnimation(
     const timeline = anime.timeline({ autoplay: false }).add({
         targets: targets,
         opacity: [0, 1],
-        easing: "easeInExpo",
+        easing: "easeInOutExpo",
     });
 
     const scene = new ScrollMagic.Scene({
@@ -96,7 +96,7 @@ anime.timeline({ loop: false }).add({
 });
 
 anime.timeline({ loop: false }).add({
-    targets: ".contact",
+    targets: ".tagline",
     opacity: [0, 1],
     translateY: [1000, 0],
     easing: "spring(1, 75, 20, 10)",
