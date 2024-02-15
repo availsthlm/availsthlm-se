@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const section3scene = new ScrollMagic.Scene({
         triggerElement: "#section3", // starting scene, when reaching this element
         reverse: false,
-        triggerHook: 0.5, // trigger at the middle of the viewport
+        triggerHook: 0.8, // trigger at the middle of the viewport
     }).on("enter", function () {
         s3t4.play();
     });
@@ -77,7 +77,7 @@ anime
         opacity: [0, 1],
         translateZ: 0,
         easing: "easeInOutExpo",
-        duration: 1000,
+        duration: 500,
         delay: (el, i) => 100 * i,
     })
     .add({
@@ -86,14 +86,13 @@ anime
         translateY: [1000, 0],
         easing: "easeInQuint",
         duration: 1000,
-        delay: 0,
     })
     .add({
         targets: ".scroll-section",
         backgroundColor: "#000", // Change background color to black
         color: "#fff", // Change text color to white
         duration: 1000, // Duration of the color inversion animation
-        easing: "easeOutElastic",
+        easing: "easeInQuint",
         delay: 500,
         complete: function (anim) {
             console.log("Color inversion complete");

@@ -126,18 +126,21 @@ div#p3 {
     }
 
     h3 {
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight: 700;
     }
 
     p {
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight: 900;
     }
 
-    #p1,
-    #p2,
-    #p4 {
+    #p1 {
+        font-weight: 700;
+        font-size: 3em;
+    }
+
+    #p2 {
         font-weight: 700;
         font-size: 2em;
     }
@@ -166,14 +169,14 @@ div#p3 {
         margin-top: 2rem;
         padding-left: 0rem;
         text-align: left;
-        font-weight: 700;
-        font-size: 2rem;
+        font-weight: 900;
+        font-size: 1.5rem;
     }
     .a {
         margin-top: 2rem;
         padding-right: 2rem;
         text-align: left;
         font-weight: 500;
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 }
