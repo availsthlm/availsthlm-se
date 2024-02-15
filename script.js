@@ -28,37 +28,35 @@ document.addEventListener("DOMContentLoaded", function () {
     /* 
     Section 2 
     */
-    const s2t = addFadeInAnimation("#section2", "#section2", 1000, 0.7);
+
+    // /*
+    // Section 3
+    // */
+
+    // const s3t4 = anime.timeline({ autoplay: false }).add({
+    //     targets: ["#p3"],
+    //     opcity: [0, 1],
+    //     translateX: [-2000, 0], // transition to black
+    //     duration: 1000, // 1 second
+    //     easing: "easeInQuint", // For a steady transition
+    // });
+
+    // const section3scene = new ScrollMagic.Scene({
+    //     triggerElement: "#section3", // starting scene, when reaching this element
+    //     reverse: false,
+    //     triggerHook: 0.8, // trigger at the middle of the viewport
+    // }).on("enter", function () {
+    //     s3t4.play();
+    // });
+
+    // controller.addScene(section3scene);
+    const s2t = addFadeInAnimation("#section2", "#p1", 1000, 0.7);
     controller.addScene(s2t);
-
-    /* 
-    Section 3 
-    */
-
-    const s3t4 = anime.timeline({ autoplay: false }).add({
-        targets: ["#p3"],
-        opcity: [0, 1],
-        translateX: [-2000, 0], // transition to black
-        duration: 1000, // 1 second
-        easing: "easeInQuint", // For a steady transition
-    });
-
-    const section3scene = new ScrollMagic.Scene({
-        triggerElement: "#section3", // starting scene, when reaching this element
-        reverse: false,
-        triggerHook: 0.8, // trigger at the middle of the viewport
-    }).on("enter", function () {
-        s3t4.play();
-    });
-
-    controller.addScene(section3scene);
-
-    /*
-    Section 5
-    */
-    // const s4t1 = addFadeInAnimation("#section4", "#section4", 700, 0.8);
-    // controller.addScene(s4t1);
-    const s5t1 = addFadeInAnimation("#section5", "#section5", 700, 0.5);
+    const s3t1 = addFadeInAnimation("#section3", "#p3", 1000, 0.7);
+    controller.addScene(s3t1);
+    const s4t1 = addFadeInAnimation("#section4", "#section4-text", 1000, 0.9);
+    controller.addScene(s4t1);
+    const s5t1 = addFadeInAnimation("#section5", "#section5-text", 1000, 0.7);
     controller.addScene(s5t1);
 });
 
@@ -78,14 +76,14 @@ anime
         translateZ: 0,
         easing: "easeInOutExpo",
         duration: 500,
-        delay: (el, i) => 100 * i,
+        delay: (el, i) => 90 * i,
     })
     .add({
         targets: ".tagline",
         opacity: [0, 1],
         translateY: [1000, 0],
         easing: "easeInQuint",
-        duration: 1000,
+        duration: 700,
     })
     .add({
         targets: ".scroll-section",

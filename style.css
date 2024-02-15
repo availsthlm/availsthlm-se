@@ -35,6 +35,7 @@ p {
 .tagline {
     font-weight: 700;
     font-size: 8em;
+    line-height: 1em;
 }
 
 .headline {
@@ -111,7 +112,7 @@ div#p3 {
     text-align: left;
 }
 
-#section5 {
+#contact {
     opacity: 0;
 }
 
