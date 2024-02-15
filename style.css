@@ -27,6 +27,8 @@ p {
     flex-direction: column;
     opacity: 1;
     background: white;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 .tagline {
@@ -46,10 +48,9 @@ p {
 
 .q {
     margin-top: 2rem;
-    padding-left: 2rem;
     text-align: left;
     font-weight: 700;
-    font-size: 3rem;
+    font-size: 2rem;
     color: inherit;
 }
 .a {
@@ -57,8 +58,17 @@ p {
     padding-right: 2rem;
     text-align: left;
     font-weight: 500;
-    font-size: 3rem;
+    font-size: 2rem;
     color: inherit;
+}
+
+.email-link {
+    color: red; /* Sätter länktextens färg till röd */
+    text-decoration: none; /* Tar bort understrykningen */
+}
+
+.email-link:hover {
+    color: yellow;
 }
 
 #p1,
@@ -67,6 +77,11 @@ p {
     font-weight: 700;
     font-size: 6em;
     opacity: 1;
+}
+
+div#p3 {
+    font-weight: 700;
+    font-size: 2em;
 }
 
 #img2 {

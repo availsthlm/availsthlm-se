@@ -41,12 +41,20 @@ document.addEventListener("DOMContentLoaded", function () {
         easing: "linear", // For a steady transition
     });
 
+    const s3t4 = anime.timeline({ autoplay: false }).add({
+        targets: ["#p3"],
+        translateX: [-1000, 0], // transition to black
+        duration: 1000, // 1 second
+        easing: "easeInExpo", // For a steady transition
+    });
+
     const section3scene = new ScrollMagic.Scene({
         triggerElement: "#section3", // starting scene, when reaching this element
         reverse: false,
         triggerHook: 0.5, // trigger at the middle of the viewport
     }).on("enter", function () {
         s3t.play(); // Play the animation when the scene enters
+        s3t4.play();
     });
 
     controller.addScene(section3scene);
