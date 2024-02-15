@@ -3,7 +3,7 @@ html {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-    color: black;
+
     width: 100%;
 }
 
@@ -26,6 +26,7 @@ p {
     align-items: center;
     flex-direction: column;
     opacity: 1;
+    color: black;
     background: white;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -82,6 +83,7 @@ p {
 div#p3 {
     font-weight: 700;
     font-size: 2em;
+    text-align: left;
 }
 
 #img2 {
@@ -97,23 +99,16 @@ div#p3 {
     background-attachment: fixed;
 } */
 
-/* #section3 #p4 {
+#section3 #p4 {
     font-weight: 700;
     font-size: 3rem;
     opacity: 1;
     text-align: left;
-} */
-
-#section3,
-#section4 {
-    text-align: left;
-    background-color: white;
-    color: white;
-    transition: background-color 1s; /* Optional for smoother color transition */
 }
 
-#p4 {
-    color: white;
+/* #section3, */
+#section4 {
+    text-align: left;
 }
 
 #section5 {

@@ -34,18 +34,13 @@ document.addEventListener("DOMContentLoaded", function () {
     /* 
     Section 3 
     */
-    const s3t = anime.timeline({ autoplay: false }).add({
-        targets: ["#section3", "#section4"],
-        backgroundColor: "#000", // transition to black
-        duration: 500, // 1 second
-        easing: "linear", // For a steady transition
-    });
 
     const s3t4 = anime.timeline({ autoplay: false }).add({
         targets: ["#p3"],
-        translateX: [-1000, 0], // transition to black
+        opcity: [0, 1],
+        translateX: [-2000, 0], // transition to black
         duration: 1000, // 1 second
-        easing: "easeInExpo", // For a steady transition
+        easing: "easeInQuint", // For a steady transition
     });
 
     const section3scene = new ScrollMagic.Scene({
@@ -53,7 +48,6 @@ document.addEventListener("DOMContentLoaded", function () {
         reverse: false,
         triggerHook: 0.5, // trigger at the middle of the viewport
     }).on("enter", function () {
-        s3t.play(); // Play the animation when the scene enters
         s3t4.play();
     });
 
@@ -75,21 +69,34 @@ headlineWrapper.innerHTML = headlineWrapper.textContent.replace(
     "<span class='letter'>$&</span>"
 );
 
-anime.timeline({ loop: false }).add({
-    targets: ".headline .letter",
-    scale: [5, 1],
-    opacity: [0, 1],
-    translateZ: 0,
-    easing: "easeInOutExpo",
-    duration: 1000,
-    delay: (el, i) => 110 * i,
-});
-
-anime.timeline({ loop: false }).add({
-    targets: ".tagline",
-    opacity: [0, 1],
-    translateY: [1000, 0],
-    easing: "spring(1, 75, 20, 10)",
-    duration: 1500,
-    delay: 1500,
-});
+anime
+    .timeline({ loop: false })
+    .add({
+        targets: ".headline .letter",
+        scale: [5, 1],
+        opacity: [0, 1],
+        translateZ: 0,
+        easing: "easeInOutExpo",
+        duration: 1000,
+        delay: (el, i) => 100 * i,
+    })
+    .add({
+        targets: ".tagline",
+        opacity: [0, 1],
+        translateY: [1000, 0],
+        easing: "easeInQuint",
+        duration: 1000,
+        delay: 0,
+    })
+    .add({
+        targets: ".scroll-section",
+        backgroundColor: "#000", // Change background color to black
+        color: "#fff", // Change text color to white
+        duration: 1000, // Duration of the color inversion animation
+        easing: "easeOutElastic",
+        delay: 500,
+        complete: function (anim) {
+            console.log("Color inversion complete");
+            // If you need to perform any action after the color inversion, you can do it here.
+        },
+    });
