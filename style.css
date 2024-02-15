@@ -146,6 +146,11 @@ div#p3 {
         font-size: 2em;
     }
 
+    #p3 {
+        font-weight: 900;
+        font-size: 1.5rem;
+    }
+
     #p4 {
         font-weight: 700;
         font-size: 3em;
@@ -153,12 +158,12 @@ div#p3 {
 
     .tagline {
         font-weight: 900;
-        font-size: 3em;
+        font-size: 2em;
     }
 
     .headline {
         font-weight: 900;
-        font-size: 4em;
+        font-size: 3em;
     }
 
     .headline .letter {
