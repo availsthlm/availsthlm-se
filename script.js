@@ -52,9 +52,14 @@ document.addEventListener("DOMContentLoaded", function () {
     // controller.addScene(section3scene);
     const s2t = addFadeInAnimation("#section2", "#p1", 1000, 0.7);
     controller.addScene(s2t);
-    const s3t1 = addFadeInAnimation("#section3", "#p3", 1000, 0.7);
+    const s3t1 = addFadeInAnimation("#p3", "#p3", 1000, 0.7);
     controller.addScene(s3t1);
-    const s4t1 = addFadeInAnimation("#section4", "#section4-text", 1000, 0.9);
+    const s4t1 = addFadeInAnimation(
+        "#section4-text",
+        "#section4-text",
+        1000,
+        0.5
+    );
     controller.addScene(s4t1);
     const s5t1 = addFadeInAnimation("#section5", "#section5-text", 1000, 0.7);
     controller.addScene(s5t1);
