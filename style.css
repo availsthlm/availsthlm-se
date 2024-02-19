@@ -3,8 +3,13 @@ html {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
-
+    background-color: black;
     width: 100%;
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: 900;
 }
 
 h3 {
@@ -34,9 +39,12 @@ p {
 
 .tagline {
     font-weight: 700;
-    font-size: 8em;
+    font-size: 3rem;
     line-height: 1em;
     opacity: 0;
+    background: white;
+    color: black;
+    padding: 0.2rem;
 }
 
 .headline {
@@ -82,7 +90,7 @@ p {
     opacity: 1;
 }
 
-div#p3 {
+#p3 {
     font-weight: 700;
     font-size: 2em;
     text-align: left;
@@ -117,6 +125,12 @@ div#p3 {
     opacity: 0;
 }
 
+#section45 {
+    padding-top: 5rem;
+}
+#section45 h2 {
+    text-align: left;
+}
 .services-grid {
     display: flex;
     flex-wrap: wrap;
@@ -158,12 +172,13 @@ div#p3 {
 
     #p1 {
         font-weight: 700;
-        font-size: 3em;
+        font-size: 2em;
+        text-align: right;
     }
 
     #p2 {
         font-weight: 700;
-        font-size: 2em;
+        font-size: 1.5em;
     }
 
     #p3 {
