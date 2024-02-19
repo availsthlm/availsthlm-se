@@ -7,6 +7,7 @@ function addFadeInAnimation(
     const timeline = anime.timeline({ autoplay: false }).add({
         targets: targets,
         opacity: [0, 1],
+        translateY: [10, 0],
         easing: "easeInOutExpo",
     });
 
@@ -23,46 +24,27 @@ function addFadeInAnimation(
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    const controller = new ScrollMagic.Controller();
-
-    /* 
-    Section 2 
-    */
-
-    // /*
-    // Section 3
-    // */
-
-    // const s3t4 = anime.timeline({ autoplay: false }).add({
-    //     targets: ["#p3"],
-    //     opcity: [0, 1],
-    //     translateX: [-2000, 0], // transition to black
-    //     duration: 1000, // 1 second
-    //     easing: "easeInQuint", // For a steady transition
-    // });
-
-    // const section3scene = new ScrollMagic.Scene({
-    //     triggerElement: "#section3", // starting scene, when reaching this element
-    //     reverse: false,
-    //     triggerHook: 0.8, // trigger at the middle of the viewport
-    // }).on("enter", function () {
-    //     s3t4.play();
-    // });
-
-    // controller.addScene(section3scene);
-    const s2t = addFadeInAnimation("#section2", "#p1", 1000, 0.7);
-    controller.addScene(s2t);
-    const s3t1 = addFadeInAnimation("#p3", "#p3", 1000, 0.7);
-    controller.addScene(s3t1);
-    const s4t1 = addFadeInAnimation(
+    const section2Scene = addFadeInAnimation("#section2", "#p1", 1000, 0.7);
+    const section3Scene = addFadeInAnimation("#p3", "#p3", 1000, 0.8);
+    // section3Scene.addIndicators();
+    const secntion4Scene = addFadeInAnimation(
         "#section4-text",
         "#section4-text",
         1000,
         0.5
     );
-    controller.addScene(s4t1);
-    const s5t1 = addFadeInAnimation("#section5", "#section5-text", 1000, 0.7);
-    controller.addScene(s5t1);
+    const section5Scene = addFadeInAnimation(
+        "#section5",
+        "#section5-text",
+        1000,
+        0.7
+    );
+
+    const controller = new ScrollMagic.Controller();
+    controller.addScene(section2Scene);
+    controller.addScene(section3Scene);
+    controller.addScene(secntion4Scene);
+    controller.addScene(section5Scene);
 });
 
 // Wrap every letter in a span
@@ -80,25 +62,33 @@ anime
         opacity: [0, 1],
         translateZ: 0,
         easing: "easeInOutExpo",
-        duration: 500,
-        delay: (el, i) => 90 * i,
-    })
-    .add({
-        targets: ".tagline",
-        opacity: [0, 1],
-        translateY: [1000, 0],
-        easing: "easeInQuint",
-        duration: 700,
+        delay: (el, i) => 70 * i,
     })
     .add({
         targets: ".scroll-section",
         backgroundColor: "#000", // Change background color to black
         color: "#fff", // Change text color to white
         duration: 1000, // Duration of the color inversion animation
-        easing: "easeInQuint",
-        delay: 500,
+        easing: "easeInOutExpo",
         complete: function (anim) {
-            console.log("Color inversion complete");
+            runTaglineAnimation();
             // If you need to perform any action after the color inversion, you can do it here.
         },
     });
+
+function runTaglineAnimation() {
+    anime
+        .timeline({ loop: true })
+        .add({
+            targets: ".tagline",
+            opacity: [0, 1],
+            easing: "linear",
+            duration: 500,
+        })
+        .add({
+            targets: ".tagline",
+            translateX: ["-100vw", "90vw"],
+            easing: "linear",
+            duration: 6000,
+        });
+}

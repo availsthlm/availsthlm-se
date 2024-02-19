@@ -36,6 +36,7 @@ p {
     font-weight: 700;
     font-size: 8em;
     line-height: 1em;
+    opacity: 0;
 }
 
 .headline {
@@ -114,6 +115,25 @@ div#p3 {
 
 #contact {
     opacity: 0;
+}
+
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Mellanrum mellan elementen */
+}
+.service {
+    text-align: left;
+    flex: 1; /* Elementen tar upp lika mycket utrymme */
+    min-width: 300px; /* Minsta bredd innan de staplas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lätt skuggning för djup */
+    padding: 20px; /* Inre mellanrum */
+    border-radius: 10px; /* Rundade hörn */
+}
+
+.service p {
+    font-weight: 500;
+    font-size: 1.5rem;
 }
 
 /* #section4 {
