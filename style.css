@@ -37,19 +37,41 @@ p {
     padding-right: 1rem;
 }
 
+.scroll-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(
+        0,
+        0,
+        0,
+        0.2
+    ); /* Justera denna RGBA för att ändra transparens och färg på gradienten */
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.2) 0%,
+        rgba(0, 0, 0, 0.2) 50%,
+        rgba(0, 0, 0, 0.5) 100%
+    ); /* Exempel på en mörkare gradient, anpassa färger och opacitet efter behov */
+    z-index: 1;
+}
+
 .tagline {
     font-weight: 700;
     font-size: 3rem;
     line-height: 1em;
     opacity: 0;
-    background: white;
-    color: black;
+    color: white;
     padding: 0.2rem;
 }
 
 .headline {
     font-weight: 900;
     font-size: 12em;
+    color: white;
 }
 
 .headline .letter {
@@ -102,7 +124,7 @@ p {
     object-fit: cover;
 }
 
-#section1 > div {
+/* #section1 > div {
     position: absolute;
     top: 40%;
     left: 0;
@@ -110,25 +132,31 @@ p {
     bottom: 0;
 }
 
-/* body {
-    background: url("/images/hero-bg.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-} */
-
-/* #section1 {
-    background: url("/images/hero-bg.webm");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-} */
-
 .video {
     width: 100%;
     height: 100vh;
     object-fit: cover;
+} */
+
+/* Se till att texten visas över gradienten */
+#section1 > div {
+    position: absolute; /* Uppdaterat från 'absolute' till 'relative' */
+    top: 40%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2; /* Gör att denna div och dess innehåll ligger ovanpå gradientöverlagret */
 }
+
+/* Uppdatera z-index för video för att säkerställa att gradienten ligger ovanpå den */
+.video {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 0; /* Sätter videon längst bak */
+}
+
 #section3 #p4 {
     font-weight: 700;
     font-size: 3rem;
