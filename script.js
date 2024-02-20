@@ -77,18 +77,16 @@ anime
     });
 
 function runTaglineAnimation() {
-    anime
-        .timeline({ loop: true })
-        .add({
-            targets: ".tagline",
-            opacity: [0, 1],
-            easing: "linear",
-            duration: 500,
-        })
-        .add({
-            targets: ".tagline",
-            translateX: ["-100vw", "90vw"],
-            easing: "linear",
-            duration: 6000,
-        });
+    anime.timeline({ loop: false }).add({
+        targets: ".tagline",
+        opacity: [0, 1],
+        easing: "linear",
+        duration: 500,
+    });
+    // .add({
+    //     targets: ".tagline",
+    //     translateX: ["-100vw", "90vw"],
+    //     easing: "linear",
+    //     duration: 10000,
+    // });
 }
