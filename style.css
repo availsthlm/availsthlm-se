@@ -1,3 +1,27 @@
+@font-face {
+    font-family: "baskerville";
+    src: url("assets/fonts/baskerville/baskerville bold bt.ttf")
+        format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "freightsans";
+    src: url("assets/fonts/Freight Sans pro/FreightSansProBook-Regular.ttf")
+        format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "freightsans";
+    src: url("assets/fonts/Freight Sans pro/FreightSansProBook-Bold.ttf")
+        format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
 body,
 html {
     margin: 0;
@@ -5,21 +29,31 @@ html {
     scroll-behavior: smooth;
     background-color: black;
     width: 100%;
+    font-family: "freightsans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "baskerville", sans-serif;
 }
 
 h2 {
     font-size: 3rem;
-    font-weight: 900;
+    font-weight: bold;
 }
 
 h3 {
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: bold;
 }
 
 p {
     font-size: 4rem;
-    font-weight: 900;
+    font-weight: bold;
 }
 
 .scroll-section {
@@ -33,8 +67,6 @@ p {
     opacity: 1;
     color: black;
     background: white;
-    padding-left: 1rem;
-    padding-right: 1rem;
 }
 
 .scroll-section::before {
@@ -157,6 +189,11 @@ p {
     z-index: 0; /* Sätter videon längst bak */
 }
 
+#section3 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
 #section3 #p4 {
     font-weight: 700;
     font-size: 3rem;
@@ -166,6 +203,8 @@ p {
 
 /* #section3, */
 #section4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
     text-align: left;
 }
 
@@ -174,9 +213,13 @@ p {
 }
 
 #section45 {
+    padding-left: 1rem;
+    padding-right: 1rem;
     padding-top: 5rem;
 }
 #section45 h2 {
+    padding-left: 1rem;
+    padding-right: 1rem;
     text-align: left;
 }
 .services-grid {
