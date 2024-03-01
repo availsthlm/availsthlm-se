@@ -15,3 +15,29 @@ jobs:
                   username: gnista
                   password: ${{ secrets.ftp_password }}
                   server-dir: public_html/
+
+build:
+    runs-on: ubuntu-latest
+
+    steps:
+        - uses: actions/checkout@v2  # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+
+        - name: Use Node.js
+          uses: actions/setup-node@v1
+          with:
+            node-version: '14'  # Set this to the node version you are using
+
+        - name: Install Dependencies
+          run: npm install
+
+        - name: Build
+        run: npm run build
+        
+        - name: Upload to FTP
+          uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+          with:
+              server: ftpcluster.loopia.se
+              username: gnista
+              password: ${{ secrets.ftp_password }}
+              server-dir: public_html/
+              local-dir: dist/

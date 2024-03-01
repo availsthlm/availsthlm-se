@@ -14,14 +14,6 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: "freightsans";
-    src: url("assets/fonts/Freight Sans pro/FreightSansProBook-Bold.ttf")
-        format("truetype");
-    font-weight: bold;
-    font-style: normal;
-}
-
 body,
 html {
     margin: 0;
@@ -69,25 +61,20 @@ p {
     background: white;
 }
 
-.scroll-section::before {
+.scroll-section:before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(
-        0,
-        0,
-        0,
-        0.2
-    ); /* Justera denna RGBA för att ändra transparens och färg på gradienten */
+    background: rgba(0, 0, 0, 0.2);
     background: linear-gradient(
         180deg,
         rgba(0, 0, 0, 0.2) 0%,
         rgba(0, 0, 0, 0.2) 50%,
         rgba(0, 0, 0, 0.5) 100%
-    ); /* Exempel på en mörkare gradient, anpassa färger och opacitet efter behov */
+    );
     z-index: 1;
 }
 
@@ -128,8 +115,8 @@ p {
 }
 
 .email-link {
-    color: red; /* Sätter länktextens färg till röd */
-    text-decoration: none; /* Tar bort understrykningen */
+    color: red;
+    text-decoration: none;
 }
 
 .email-link:hover {
@@ -156,37 +143,21 @@ p {
     object-fit: cover;
 }
 
-/* #section1 > div {
+#section1 > div {
     position: absolute;
     top: 40%;
     left: 0;
     right: 0;
     bottom: 0;
+    z-index: 2;
 }
 
-.video {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-} */
-
-/* Se till att texten visas över gradienten */
-#section1 > div {
-    position: absolute; /* Uppdaterat från 'absolute' till 'relative' */
-    top: 40%;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 2; /* Gör att denna div och dess innehåll ligger ovanpå gradientöverlagret */
-}
-
-/* Uppdatera z-index för video för att säkerställa att gradienten ligger ovanpå den */
 .video {
     position: relative;
     width: 100%;
     height: 100vh;
     object-fit: cover;
-    z-index: 0; /* Sätter videon längst bak */
+    z-index: 0;
 }
 
 #section3 {
@@ -201,7 +172,6 @@ p {
     text-align: left;
 }
 
-/* #section3, */
 #section4 {
     padding-left: 1rem;
     padding-right: 1rem;
@@ -225,26 +195,21 @@ p {
 .services-grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* Mellanrum mellan elementen */
+    gap: 20px;
 }
 .service {
     text-align: left;
-    flex: 1; /* Elementen tar upp lika mycket utrymme */
-    min-width: 300px; /* Minsta bredd innan de staplas */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lätt skuggning för djup */
-    padding: 20px; /* Inre mellanrum */
-    border-radius: 10px; /* Rundade hörn */
+    flex: 1;
+    min-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
 }
 
 .service p {
     font-weight: 500;
     font-size: 1.5rem;
 }
-
-/* #section4 {
-    background: black;
-    color: white;
-} */
 
 @media screen and (max-width: 768px) {
     .scroll-section {
