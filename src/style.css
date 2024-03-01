@@ -14,6 +14,14 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "freightsans";
+    src: url("assets/fonts/Freight Sans pro/FreightSansProSemibold-Regular.ttf")
+        format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
 body,
 html {
     margin: 0;
@@ -34,7 +42,7 @@ h6 {
 }
 
 h2 {
-    font-size: 3rem;
+    font-size: 5rem;
     font-weight: bold;
 }
 
@@ -152,6 +160,10 @@ p {
     z-index: 2;
 }
 
+#section1.scroll-section {
+    padding: 0;
+}
+
 .video {
     position: relative;
     width: 100%;
@@ -190,6 +202,7 @@ p {
 #section45 h2 {
     padding-left: 1rem;
     padding-right: 1rem;
+    padding-bottom: 2rem;
     text-align: left;
 }
 .services-grid {
@@ -201,8 +214,6 @@ p {
     text-align: left;
     flex: 1;
     min-width: 300px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
     border-radius: 10px;
 }
 
@@ -222,9 +233,16 @@ p {
         font-size: 2.5em;
     }
 
-    #p1 {
+    #p1,
+    #p2,
+    #p4 {
         font-weight: 700;
-        font-size: 4rem;
+        font-size: 4em;
+        opacity: 1;
+    }
+
+    #section3 #p4 {
+        font-size: 2.5.rem;
     }
 }
 @media screen and (max-width: 788px) {
@@ -283,7 +301,7 @@ p {
         padding-left: 0rem;
         text-align: left;
         font-weight: 900;
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
     .a {
         margin-top: 2rem;
