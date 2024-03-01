@@ -27,14 +27,22 @@ function addFadeInAnimation(
 
 document.addEventListener("DOMContentLoaded", function () {
     const section2Scene = addFadeInAnimation("#section2", "#p1", 1000, 0.7);
-    const section3Scene = addFadeInAnimation("#p3", "#p3", 1000, 0.8);
+    const section3Scene = addFadeInAnimation("#p3", "#p3", 1000, 0.7);
     // section3Scene.addIndicators();
     const secntion4Scene = addFadeInAnimation(
         "#section4-text",
         "#section4-text",
         1000,
-        0.5
+        0.7
     );
+
+    const section45Scene = addFadeInAnimation(
+        "#section45",
+        "#section45-text",
+        1000,
+        0.7
+    );
+
     const section5Scene = addFadeInAnimation(
         "#section5",
         "#section5-text",
@@ -46,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
     controller.addScene(section2Scene);
     controller.addScene(section3Scene);
     controller.addScene(secntion4Scene);
+    controller.addScene(section45Scene);
     controller.addScene(section5Scene);
 });
 
