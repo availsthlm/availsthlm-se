@@ -29,16 +29,31 @@ document.addEventListener("DOMContentLoaded", function () {
     const section2Scene = addFadeInAnimation("#section2", "#p1", 1000, 0.7);
     const section3Scene = addFadeInAnimation("#p3", "#p3", 1000, 0.7);
     // section3Scene.addIndicators();
-    const secntion4Scene = addFadeInAnimation(
+
+    const section41Scene = addFadeInAnimation(
         "#section4-text",
-        "#section4-text",
+        "#section4-1",
+        1000,
+        0.7
+    );
+
+    const section42Scene = addFadeInAnimation(
+        "#section4-1",
+        "#section4-2",
+        1000,
+        0.7
+    );
+
+    const section43Scene = addFadeInAnimation(
+        "#section4-2",
+        "#section4-3",
         1000,
         0.7
     );
 
     const section45Scene = addFadeInAnimation(
         "#section45",
-        "#section45-text",
+        "#section45",
         1000,
         0.7
     );
@@ -53,7 +68,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const controller = new ScrollMagic.Controller();
     controller.addScene(section2Scene);
     controller.addScene(section3Scene);
-    controller.addScene(secntion4Scene);
+    controller.addScene(section41Scene);
+    controller.addScene(section42Scene);
+    controller.addScene(section43Scene);
     controller.addScene(section45Scene);
     controller.addScene(section5Scene);
 });
@@ -92,10 +109,4 @@ function runTaglineAnimation() {
         easing: "linear",
         duration: 500,
     });
-    // .add({
-    //     targets: ".tagline",
-    //     translateX: ["-100vw", "90vw"],
-    //     easing: "linear",
-    //     duration: 10000,
-    // });
 }

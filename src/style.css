@@ -87,13 +87,27 @@ a:hover {
     align-items: center;
     flex-direction: column;
     opacity: 1;
-    color: black;
-    background: white;
+    color: white;
+    background: black;
     padding-left: 16px;
     padding-right: 16px;
 }
 
-.scroll-section:before {
+.scroll-section-1 {
+    min-height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 1;
+    color: white;
+    background: black;
+    z-index: 0;
+}
+
+.scroll-section-1::before {
     content: "";
     position: absolute;
     top: 0;
@@ -104,8 +118,8 @@ a:hover {
     background: linear-gradient(
         180deg,
         rgba(0, 0, 0, 0.2) 0%,
-        rgba(0, 0, 0, 0.2) 50%,
-        rgba(0, 0, 0, 0.5) 100%
+        rgba(0, 0, 0, 0.5) 50%,
+        rgba(0, 0, 0, 1) 80%
     );
     z-index: 1;
     height: 110vh;
@@ -189,9 +203,9 @@ a:hover {
     z-index: 2;
 }
 
-#section1.scroll-section {
+/* #section1.scroll-section {
     padding: 0;
-}
+} */
 
 .video {
     position: relative;
@@ -221,6 +235,12 @@ a:hover {
     padding-left: 1rem;
     padding-right: 1rem;
     text-align: left;
+}
+
+#section4-1,
+#section4-2,
+#section4-3 {
+    opacity: 0;
 }
 
 #contact {
