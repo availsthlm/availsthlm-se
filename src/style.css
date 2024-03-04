@@ -124,6 +124,8 @@ a:hover {
     opacity: 0;
     color: white;
     padding: 0.2rem;
+    width: 60vw;
+    margin: 0 auto;
 }
 
 .headline {
@@ -180,7 +182,7 @@ a:hover {
 
 #section1 > div {
     position: absolute;
-    top: 40%;
+    top: 30%;
     left: 0;
     right: 0;
     bottom: 0;
@@ -306,6 +308,7 @@ a:hover {
     .tagline {
         font-weight: normal;
         font-size: 2em;
+        width: 80vw;
     }
 
     .headline {

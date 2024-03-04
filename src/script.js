@@ -67,19 +67,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
 anime
     .timeline({ loop: false })
-    // .add({
-    //     targets: ".headline .letter",
-    //     scale: [5, 1],
-    //     opacity: [0, 1],
-    //     translateZ: 0,
-    //     easing: "easeInOutExpo",
-    //     delay: (el, i) => 70 * i,
-    // })
+    .add({
+        targets: ".logo",
+        opacity: [0, 1],
+        easing: "linear",
+        duration: 2000,
+    })
     .add({
         targets: ".scroll-section",
         backgroundColor: "#000", // Change background color to black
         color: "#fff", // Change text color to white
-        duration: 1000, // Duration of the color inversion animation
+        duration: 500, // Duration of the color inversion animation
         easing: "easeInOutExpo",
         complete: function (anim) {
             runTaglineAnimation();
