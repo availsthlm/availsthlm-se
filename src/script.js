@@ -27,14 +27,14 @@ function addFadeInAnimation(
 
 document.addEventListener("DOMContentLoaded", function () {
     const section2Scene = addFadeInAnimation("#section2", "#p1", 1000, 0.7);
-    const section3Scene = addFadeInAnimation("#p3", "#p3", 1000, 0.7);
+    const section3Scene = addFadeInAnimation("#p3", "#p3", 1000, 0.5);
     // section3Scene.addIndicators();
 
     const section41Scene = addFadeInAnimation(
         "#section4-text",
         "#section4-1",
         1000,
-        0.7
+        1
     );
 
     const section42Scene = addFadeInAnimation(
@@ -48,12 +48,12 @@ document.addEventListener("DOMContentLoaded", function () {
         "#section4-2",
         "#section4-3",
         1000,
-        0.7
+        0.4
     );
 
     const section45Scene = addFadeInAnimation(
         "#section45",
-        "#section45",
+        "#section45-text",
         1000,
         0.7
     );
