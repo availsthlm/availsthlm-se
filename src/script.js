@@ -59,22 +59,22 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Wrap every letter in a span
-var headlineWrapper = document.querySelector(".headline");
-headlineWrapper.innerHTML = headlineWrapper.textContent.replace(
-    /\S/g,
-    "<span class='letter'>$&</span>"
-);
+// var headlineWrapper = document.querySelector(".headline");
+// headlineWrapper.innerHTML = headlineWrapper.textContent.replace(
+//     /\S/g,
+//     "<span class='letter'>$&</span>"
+// );
 
 anime
     .timeline({ loop: false })
-    .add({
-        targets: ".headline .letter",
-        scale: [5, 1],
-        opacity: [0, 1],
-        translateZ: 0,
-        easing: "easeInOutExpo",
-        delay: (el, i) => 70 * i,
-    })
+    // .add({
+    //     targets: ".headline .letter",
+    //     scale: [5, 1],
+    //     opacity: [0, 1],
+    //     translateZ: 0,
+    //     easing: "easeInOutExpo",
+    //     delay: (el, i) => 70 * i,
+    // })
     .add({
         targets: ".scroll-section",
         backgroundColor: "#000", // Change background color to black
