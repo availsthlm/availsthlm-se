@@ -206,6 +206,10 @@ a:hover {
     padding-right: 1rem;
 }
 
+#section3 {
+    text-align: left;
+}
+
 #section3 #p4 {
     font-weight: normal;
     font-size: 3rem;
@@ -229,7 +233,6 @@ a:hover {
     padding-top: 5rem;
 }
 #section45 h2 {
-    padding-bottom: 2rem;
     text-align: left;
 }
 .services-grid {
