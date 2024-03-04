@@ -54,11 +54,11 @@ h6 {
 }
 
 h2 {
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 h3 {
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 h4 {
@@ -162,7 +162,7 @@ a:hover {
 #p2,
 #p4 {
     font-weight: normal;
-    font-size: 6em;
+    font-size: 4rem;
     opacity: 1;
 }
 
