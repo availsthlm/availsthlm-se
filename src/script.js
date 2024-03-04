@@ -27,7 +27,7 @@ function addFadeInAnimation(
 
 document.addEventListener("DOMContentLoaded", function () {
     const section2Scene = addFadeInAnimation("#section2", "#p1", 1000, 0.7);
-    const section3Scene = addFadeInAnimation("#p3", "#p3", 1000, 0.5);
+    const section3Scene = addFadeInAnimation("#p3", "#p3", 1000, 0.7);
     // section3Scene.addIndicators();
 
     const section41Scene = addFadeInAnimation(
@@ -88,7 +88,13 @@ anime
         targets: ".logo",
         opacity: [0, 1],
         easing: "linear",
-        duration: 2000,
+        duration: 500,
+    })
+    .add({
+        targets: ".tagline",
+        opacity: [0, 1],
+        easing: "linear",
+        duration: 500,
     })
     .add({
         targets: ".scroll-section",
@@ -97,7 +103,7 @@ anime
         duration: 500, // Duration of the color inversion animation
         easing: "easeInOutExpo",
         complete: function (anim) {
-            runTaglineAnimation();
+            // runTaglineAnimation();
             // If you need to perform any action after the color inversion, you can do it here.
         },
     });
