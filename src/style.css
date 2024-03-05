@@ -33,6 +33,16 @@
     font-display: swap;
 }
 
+.scroller {
+    height: 300px;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.scroller section {
+    scroll-snap-align: start;
+}
+
 body,
 html {
     margin: 0;
@@ -50,6 +60,7 @@ h4,
 h5,
 h6 {
     font-family: "baskerville", sans-serif;
+    font-weight: normal;
     letter-spacing: normal;
 }
 
@@ -74,8 +85,14 @@ a {
     text-decoration: none;
 }
 
+a.email-link {
+    color: #c6c6c6;
+}
+
 a:hover {
-    color: yellow;
+    color: black;
+    background: white;
+    text-decoration: none;
 }
 
 .scroll-section {
@@ -91,9 +108,14 @@ a:hover {
     background: black;
     padding-left: 16px;
     padding-right: 16px;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
 }
 
 .scroll-section-1 {
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+
     min-height: 100vh;
     width: 100%;
     text-align: center;
@@ -165,21 +187,17 @@ a:hover {
     padding-right: 2rem;
     text-align: left;
     font-weight: normal;
-    font-size: 2rem;
     color: inherit;
-}
-
-.email-link {
-    color: white;
-    text-decoration: underline;
 }
 
 #p1,
 #p2,
 #p4 {
     font-weight: normal;
-    font-size: 4rem;
+
     opacity: 1;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
 }
 
 #p3 {
@@ -237,6 +255,11 @@ a:hover {
     text-align: left;
 }
 
+#section4-text {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
 #section4-1,
 #section4-2,
 #section4-3 {
@@ -263,13 +286,10 @@ a:hover {
 .service {
     text-align: left;
     flex: 1;
-    min-width: 300px;
-    border-radius: 10px;
 }
 
 .service p {
     font-weight: normal;
-    font-size: 1.5rem;
 }
 
 @media screen and (max-width: 1240px) {
