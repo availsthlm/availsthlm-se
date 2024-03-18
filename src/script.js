@@ -26,50 +26,50 @@ function addFadeInAnimation(
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    const section2Scene = addFadeInAnimation("#section2", "#p1", 1000, 0.3);
-    const section3Scene = addFadeInAnimation("#p3", "#p3", 1000, 0.7);
+    const section2Scene = addFadeInAnimation("#section2", "#p1", 1000, 0.8);
+    const section3Scene = addFadeInAnimation("#p3", "#p3", 1000, 0.8);
     // section3Scene.addIndicators();
 
     const section41Scene = addFadeInAnimation(
         "#section4-text",
         "#section4-1",
         1000,
-        1
+        0.8
     );
 
     const section42Scene = addFadeInAnimation(
         "#section4-1",
         "#section4-2",
         1000,
-        0.7
+        0.8
     );
 
     const section43Scene = addFadeInAnimation(
         "#section4-2",
         "#section4-3",
         1000,
-        0.4
+        0.8
     );
 
     const section44Scene = addFadeInAnimation(
         "#section4-4",
         "#section4-4",
         1000,
-        0.4
+        0.8
     );
 
     const section45Scene = addFadeInAnimation(
         "#section45",
         "#section45-text",
         1000,
-        0.7
+        0.8
     );
 
     const section5Scene = addFadeInAnimation(
         "#section5",
         "#section5-text",
         1000,
-        0.7
+        0.8
     );
 
     const controller = new ScrollMagic.Controller();
