@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <script
+            id="Cookiebot"
+            src="https://consent.cookiebot.com/uc.js"
+            data-cbid="3754e71d-22c8-4e05-ac5b-a1e997c5e1c6"
+            data-blockingmode="auto"
+            type="text/javascript"
+        ></script>
         <!-- Google tag (gtag.js) -->
         <script
             async
@@ -243,48 +250,8 @@
                     </div>
                 </div>
             </section>
-            <div
-                id="cookieConsentContainer"
-                class="fixed-bottom bg-light p-3 border-top text-center"
-                style="display: none"
-            >
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-md-8">
-                            <p>
-                                Den här webbplatsen använder cookies för att
-                                samla data till Google analyics. Genom att
-                                använda webbplatsen samtycker du till detta.
-                            </p>
-                            <button
-                                id="cookieConsentButton"
-                                class="btn btn-primary"
-                            >
-                                OK
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </main>
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                var consent = localStorage.getItem("userConsent");
-                if (!consent) {
-                    document.getElementById(
-                        "cookieConsentContainer"
-                    ).style.display = "block";
-                }
 
-                document.getElementById("cookieConsentButton").onclick =
-                    function () {
-                        localStorage.setItem("userConsent", "true");
-                        document.getElementById(
-                            "cookieConsentContainer"
-                        ).style.display = "none";
-                    };
-            });
-        </script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.0/anime.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
